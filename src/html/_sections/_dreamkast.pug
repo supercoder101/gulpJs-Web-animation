@@ -1,0 +1,78 @@
+.p-section-dreamkast.p-fullscreen-section.js-fullscreen-section
+  .p-section-dreamkast__in
+    h2.p-section-dreamkast__heading
+      .p-section-dreamkast__heading-wrap
+        .p-section-dreamkast__heading-typo-wrap
+          .p-section-dreamkast__heading-typo1.u-tt-u Latest 
+          .p-section-dreamkast__heading-typo2 From the
+        img.p-section-dreamkast__heading-logo(
+          src = `${path}/img/index/dreamkast/logo_dreamcast.svg`
+          alt = ""
+          )
+    .p-section-dreamkast__items-wrap
+      .p-section-dreamkast__items#dreamkast
+        a.p-section-dreamkast__item(
+          v-for = 'item, index in items'
+          :href = 'item.href'
+          :class = 'classnamesItem(index)'
+          )
+          .p-section-dreamkast__item-thumb-wrap
+            .p-section-dreamkast__item-thumb(
+              :style = 'stylesItemThumb(index)'
+              )
+            .p-section-dreamkast__item-category.u-tt-u
+              |{{ item.category }}
+          .p-section-dreamkast__item-content
+            h3.p-section-dreamkast__item-title
+              |{{ item.title }}
+            p.p-section-dreamkast__item-summary
+              |{{ item.summary }}
+          .p-section-dreamkast__item-footer
+            .p-section-dreamkast__item-date
+              .p-section-dreamkast__item-date-month.u-tt-u {{ item.dateMonth }}
+              .p-section-dreamkast__item-date-day {{ item.dateDay }}
+            .p-section-dreamkast__item-readmore.u-tt-u
+              |Read More
+    .p-section-dreamkast__footer#dreamkast-subscribe
+      .p-section-dreamkast__contact(
+        :class = '{ "is-shown" : isOpened === 1, "is-hidden" : isOpened === 2 }'
+        )
+        .p-section-dreamkast__contact-label.u-tt-u
+          strong
+            |Get 
+            span f
+            |ree 
+          |Insight & Inspiration 
+          br
+          strong directly in your inbox
+        form.p-section-dreamkast__contact-form
+          .p-section-dreamkast__contact-wrap
+            input.p-section-dreamkast__contact-input(
+              type = "email"
+              placeholder = "EMAIL"
+              )
+          button.p-section-dreamkast__contact-submit
+            img(
+              src = `${path}/img/common/arrow_r.svg`
+              alt = ""
+              )
+      .p-section-dreamkast__open-contact.u-tt-u(
+        @click = 'toggleNavi'
+        )
+        |Subscribe Now!
+        .p-section-dreamkast__cross(
+          :class = '{ "is-shown" : isOpened === 1, "is-hidden" : isOpened === 2 }'
+          )
+          .p-section-dreamkast__cross-line.p-section-dreamkast__cross-line--01
+          .p-section-dreamkast__cross-line.p-section-dreamkast__cross-line--02
+      a.p-section-dreamkast__open.u-tt-u(
+        href = "https://dreamkast.armelin.media/"
+        target = "_blank"
+        )
+        |Open Dreamkast
+        img(
+          src = `${path}/img/common/double_arrow_r.svg`
+          alt = ""
+          )
+  .p-section-dreamkast__bg
+  .p-section-dreamkast__rect

@@ -1,0 +1,38 @@
+.p-canvas-webgl {
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+  .p-index-header & {
+    z-index: 100;
+  }
+  .p-section-clients & {
+    z-index: 1;
+  }
+  .p-creative-studio-header & {
+    z-index: 100;
+  }
+  .p-star-agency-header & {
+    z-index: 50;
+  }
+
+  //
+  // Animation
+  //
+  opacity: 0;
+  &.is-shown, .is-leaved-contents & {
+    transition-property: opacity;
+  }
+  &.is-shown {
+    opacity: 1;
+    transition-duration: 4s;
+    transition-delay: .5s;
+    .p-star-agency-header & {
+      transition-delay: 0s;
+    }
+  }
+  &.is-hidden, .is-leaved-contents & {
+    opacity: 0;
+    transition-duration: .5s;
+    transition-delay: 0s;
+  }
+}

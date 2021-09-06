@@ -1,0 +1,55 @@
+.c-carousel-navi {
+  display: flex;
+  &__item {
+    cursor: pointer;
+    position: relative;
+    background-color: $color-key;
+    @include l-more-than-mobile {
+      width: 94px;
+      height: 78px;
+      margin-left: 2px;
+    }
+    @include l-mobile {
+      width: 62px;
+      height: 52px;
+      margin-right: 1px;
+      margin-left: 1px;
+    }
+    &.is-disabled {
+      pointer-events: none;
+    }
+    .c-arrow-r, .c-arrow-l {
+      position: absolute;
+      fill: #fff;
+      @include l-more-than-mobile {
+        left: 21px;
+      }
+      @include l-mobile {
+        width: 34px;
+        height: 15px;
+        left: 15px;
+      }
+    }
+    &.is-disabled {
+      .c-arrow-r, .c-arrow-l {
+        fill: #000;
+      }
+    }
+    .c-arrow-r {
+      @include l-more-than-mobile {
+        top: 34px;
+      }
+      @include l-mobile {
+        top: 22px;
+      }
+    }
+    .c-arrow-l {
+      @include l-more-than-mobile {
+        top: 23px;
+      }
+      @include l-mobile {
+        top: 15px;
+      }
+    }
+  }
+}

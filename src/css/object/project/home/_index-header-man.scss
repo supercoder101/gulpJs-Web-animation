@@ -1,0 +1,46 @@
+.p-index-header-man {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin-right: auto;
+  margin-left: auto;
+  @include l-pc {
+    height: 700 / 920 * 100%;
+    top: 85 / 920 * 100%;
+  }
+  @include l-tablet-l {
+    height: 700 / 920 * 100%;
+    top: 85 / 920 * 100%;
+  }
+  @include l-tablet-p {
+    height: 540 / 1024 * 100%;
+    top: 170 / 1024 * 100%;
+  }
+  @include l-mobile {
+    width: 90%;
+    max-width: 375 * 0.9px;
+    top: 150 / 1920 * 100%;
+  }
+  //
+  // Animation
+  //
+  opacity: 0;
+  transform: scale(1.05);
+  .is-shown &, .is-hidden &, .is-leaved-contents & {
+    transition-property: opacity, transform;
+  }
+  .is-shown & {
+    opacity: 1;
+    transform: scale(1.01);
+    transition-duration: 4s;
+    transition-delay: .7s;
+    transition-timing-function: $easeOutCirc;
+  }
+  .is-hidden &, .is-leaved-contents & {
+    opacity: 0;
+    transition-duration: .5s;
+    transition-delay: 0s;
+  }
+}

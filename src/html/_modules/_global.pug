@@ -1,0 +1,57 @@
+.p-global-header#global-header
+  .p-global-nav-bar(
+    :class = '{ "is-mounted" : isMounted === true, "is-shown" : isShownBar === true }'
+    )
+    .p-global-nav-bar__in
+      a.p-global-nav-bar__item.p-global-nav-bar__item--has-icon.js-hover(
+        href = `${path}/`
+        :class = '{ "is-current" : currentId === 0 }'
+        )
+        +svgStar(16)
+      a.p-global-nav-bar__item.js-hover(
+        href = `${path}/creative-studio/`
+        :class = '{ "is-current" : currentId === 1 }'
+        )
+        strong Creative&nbsp;
+        |Studio 
+      a.p-global-nav-bar__item.js-hover(
+        href = `${path}/strategy-ward/`
+        :class = '{ "is-current" : currentId === 2 }'
+        )
+        strong Strategy&nbsp;
+        |Ward
+      a.p-global-nav-bar__item.js-hover(
+        href = `${path}/star-agency/`
+        :class = '{ "is-current" : currentId === 3 }'
+        )
+        strong Star&nbsp;
+        |Agency
+      a.p-global-nav-bar__item.p-global-nav-bar__item--has-icon.js-hover(
+        href = `${path}/`
+        :class = '{ "is-current" : currentId === 4 }'
+        )
+        +svgPackages(15)
+  .p-global-header__in(
+    :class = '{ "is-mounted" : isMounted === true, "is-shown" : isShown === true }'
+    )
+    a.p-global-logo(
+      :class = '{ "is-mounted" : isMounted === true, "is-black" : isBlack === true }'
+      href = `${path}/`
+      )
+      +svgAMLogo(72)
+    .p-hamburger(
+      :class = '{ "is-mounted" : isMounted === true, "is-black" : isBlack === true, "is-opened-navi" : isOpenedNavi === 1, "is-closed-navi" : isOpenedNavi === 2, "is-over" : isOveredHamburger === 1, "is-leave" : isOveredHamburger === 2 }'
+      @click = 'toggleNavi'
+      @mouseover = 'mouseoverHamburger',
+      @mouseout = 'mouseoutHamburger',
+      )
+      .p-hamburger__line.p-hamburger__line--01
+        .p-hamburger__line-in.p-hamburger__line-in--01
+      .p-hamburger__line.p-hamburger__line--02
+        .p-hamburger__line-in.p-hamburger__line-in--02
+      .p-hamburger__line.p-hamburger__line--03
+        .p-hamburger__line-in.p-hamburger__line-in--03
+      .p-hamburger__line.p-hamburger__line--cross01
+        .p-hamburger__line-in.p-hamburger__line-in--cross01
+      .p-hamburger__line.p-hamburger__line--cross02
+        .p-hamburger__line-in.p-hamburger__line-in--cross02

@@ -1,0 +1,182 @@
+.p-section-founder {
+  &__content {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 30;
+    color: #0f0f0f;
+    text-align: center;
+    @include l-more-than-mobile {
+      top: 174px;
+    }
+    @include l-mobile {
+      top: calc(455 / 1890 * 100% + 38px);
+    }
+  }
+  &__heading {
+    line-height: 0.8;
+    margin-top: 0;
+    color: $color-key;
+    @include fontSizeAll(58, 58, 26);
+    font-family: $font-bedas;
+    letter-spacing: 0.3em;
+    @include l-more-than-mobile {
+      margin-bottom: 40px;
+    }
+    @include l-mobile {
+      margin-bottom: 18px;
+    }
+  }
+  &__copy {
+    line-height: (47 / 41);
+    margin-top: 0;
+    @include fontSizeAll(29, 29, 14);
+    font-weight: light;
+    letter-spacing: 0.025em;
+    @include l-more-than-mobile {
+      margin-bottom: 35px;
+    }
+    @include l-mobile {
+      margin-bottom: 25px;
+    }
+    strong {
+      color: $color-key;
+    }
+    em {
+      color: $color-key;
+      font-style: normal;
+    }
+  }
+  &__profile {
+    line-height: (46 / 38);
+    margin-top: 0;
+    @include fontSizeAll(21, 21, 13);
+    font-weight: 100;
+    @include l-more-than-mobile {
+      margin-bottom: 15px;
+    }
+    @include l-mobile {
+      margin-bottom: 0;
+    }
+  }
+  &__sns {
+    line-height: (46 / 38);
+    margin-top: 0;
+    @include fontSizeAll(18, 18, 11);
+  }
+  &__sns-items {
+    display: flex;
+    justify-content: center;
+  }
+  &__sns-icon {
+    @include l-more-than-mobile {
+      width: 38px;
+      height: 38px;
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+    @include l-mobile {
+      width: 22px;
+      height: 22px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+  }
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    @include l-more-than-mobile {
+      background-image: url('../img/index/founder/bg.jpg');
+    }
+    @include l-mobile {
+      background-image: url('../img/index/founder/bg_sp.jpg');
+    }
+  }
+
+  //
+  // Animation
+  //
+  &__heading, &__copy, &__profile, &__sns {
+    opacity: 0;
+    transform: translateY(-10px);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 1s;
+      transition-delay: .7s;
+    }
+    .is-hidden & {
+      transition-duration: 1s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: 1s;
+    }
+  }
+  &__heading {
+    .is-shown & {
+      transition-delay: .4s;
+    }
+    .is-hidden &,
+    .is-leaved-contents & {
+      transition-delay: 0s;
+    }
+  }
+  &__copy {
+    .is-shown & {
+      transition-delay: .5s;
+    }
+    .is-hidden &,
+    .is-leaved-contents & {
+      transition-delay: 0s;
+    }
+  }
+  &__profile {
+    .is-shown & {
+      transition-delay: .6s;
+    }
+    .is-hidden &,
+    .is-leaved-contents & {
+      transition-delay: 0s;
+    }
+  }
+  &__sns {
+    .is-shown & {
+      transition-delay: .7s;
+    }
+    .is-hidden &,
+    .is-leaved-contents & {
+      transition-delay: 0s;
+    }
+  }
+  &__bg {
+    opacity: 0;
+    transform: scale(1.05);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 1s;
+    }
+    .is-hidden & {
+      transition-duration: 1s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transform: scale(1.05);
+      transition-duration: 1s;
+    }
+  }
+}

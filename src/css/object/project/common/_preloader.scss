@@ -1,0 +1,61 @@
+.p-preloader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 100;
+  pointer-events: none;
+  &__logo {
+    margin-bottom: 10px;
+  }
+  &__spinner {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+  }
+  &__rect {
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+    &--2 {
+      animation-delay: -1.1s;
+    }
+    &--3 {
+      animation-delay: -1.0s;
+    }
+    &--4 {
+      animation-delay: -0.9s;
+    }
+    &--5 {
+      animation-delay: -0.8s;
+    }
+  }
+  @keyframes stretchdelay {
+      0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+      20% { -webkit-transform: scaleY(1.0) }
+  }
+
+  //
+  // Animation
+  //
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  &.is-shown, &.is-hidden {
+    transition-duration: .4s;
+    transition-delay: .2s;
+  }
+  &.is-shown {
+    opacity: 1;
+  }
+  &.is-hidden {
+    opacity: 0;
+  }
+}

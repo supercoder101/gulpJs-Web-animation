@@ -1,0 +1,35 @@
+.p-index-header-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../img/index/bg.jpg');
+  background-position: center;
+  @include l-more-than-mobile {
+    background-size: cover;
+  }
+  @include l-mobile {
+    background-size: 100 / 45 * 100% 100%;
+  }
+  //
+  // Animation
+  //
+  opacity: 0;
+  transform: scale(1.1);
+  .is-shown &, .is-hidden &, .is-leaved-contents & {
+    transition-property: opacity, transform;
+  }
+  .is-shown & {
+    opacity: 1;
+    transform: scale(1.01);
+    transition-duration: 4s;
+    transition-delay: .3s;
+    transition-timing-function: $easeOutCirc;
+  }
+  .is-hidden &, .is-leaved-contents & {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0s;
+  }
+}

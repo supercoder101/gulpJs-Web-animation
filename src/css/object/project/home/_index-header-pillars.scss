@@ -1,0 +1,44 @@
+.p-index-header-pillars {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  @include fontSizeAll(33, 33, 24);
+  @include l-pc {
+    margin-bottom: 70 / 920 * 100vh;
+  }
+  @include l-tablet-l {
+    margin-bottom: 30px;
+  }
+  @include l-tablet-p {
+    margin-bottom: 50px;
+  }
+  @include l-mobile {
+    margin-bottom: 30px;
+  }
+  @media all and (max-height: 732px) {
+    display: none;
+  }
+  &__row {
+    width: 100%;
+  }
+  //
+  // Animation
+  //
+  opacity: 0;
+  .is-shown &, .is-hidden &, .is-leaved-contents & {
+    transition-property: opacity;
+  }
+  .is-shown & {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 1s;
+  }
+  .is-hidden &, .is-leaved-contents & {
+    opacity: 0;
+    transition-duration: .5s;
+    transition-delay: 0s;
+  }
+}

@@ -1,0 +1,45 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" width="50">
+    <circle cx="50" cy="50" r="30">
+        <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="2s"
+                type="translate"
+                values="0 0; 15 15; 0 0;"
+                keyTimes="0; 0.5; 1"
+                repeatCount="indefinite"
+        />
+        <animate attributeName="r"
+                 values="40; 20; 40;"
+                 keyTimes="0; 0.5; 1"
+                 dur="3.5s"
+                 repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="70" r="40">
+        <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="3s"
+                type="translate"
+                values="0 0; -10 -10; 0 0;"
+                keyTimes="0; 0.5; 1"
+                repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="70" cy="20" r="40">
+        <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="3s"
+                type="translate"
+                values="0 0; 0 10; 0 0;"
+                keyTimes="0; 0.5; 1"
+                repeatCount="indefinite"
+        />
+        <animate attributeName="r"
+                 values="50; 30; 50;"
+                 keyTimes="0; 0.5; 1"
+                 dur="5s"
+                 repeatCount="indefinite"/>
+    </circle>
+</svg>

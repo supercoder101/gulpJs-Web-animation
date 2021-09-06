@@ -1,0 +1,60 @@
+extends ./_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.index;
+
+block content
+  .p-fullscreen-wrap.js-fullscreen-wrap
+    .p-index-header.p-fullscreen-section.js-fullscreen-section
+      img.p-index-header-man.u-no-selection(src=`${path}/img/index/man.png`, alt="")
+      .p-index-header-content
+        .p-index-header-pillars
+          img(src=`${path}/img/index/pillars.png`, alt="Explore Dream Discover")
+        h1.p-index-header-content__heading
+          img.p-index-header-content__head-logo(src=`${path}/img/common/logo_am.svg`, width="108", alt="")
+          span.p-index-header-content__head-label
+            |ARMELIN MEDIA
+        p.p-index-header-content__excerpt.u-tt-u
+          |When obstacles 
+          strong obstruct your path
+          br.u-dn-pc.u-dn-tablet
+          |&nbsp;and 
+          strong obscure your vision,
+          br
+          strong we'll be there
+          |&nbsp;to help you 
+          strong see it
+          br.u-dn-pc.u-dn-tablet
+          |&nbsp;and 
+          strong see it through.
+      .p-index-header-explore
+        .p-index-header-explore__in.u-tt-u.js-header-btn
+          strong Explore 
+          |&nbsp;the ways
+        .p-index-header-explore__bar
+      .p-index-header-bg
+
+    include ./_sections/_services.pug
+    include ./_sections/_studio.pug
+    include ./_sections/_clients.pug
+    include ./_sections/_founder.pug
+    include ./_sections/_be-part.pug
+    include ./_sections/_dreamkast.pug
+
+    .p-fullscreen-pager.js-fullscreen-pager
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      //.p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__bar

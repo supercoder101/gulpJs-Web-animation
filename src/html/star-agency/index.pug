@@ -1,0 +1,54 @@
+extends ../_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.starAgency;
+
+block content
+  .p-fullscreen-wrap.js-fullscreen-wrap
+    .p-star-agency-header.p-fullscreen-section.js-fullscreen-section
+      .p-star-agency-header__heading.u-tt-u
+        img.p-star-agency-header__heading-logo(
+          src = `${path}/img/common/logo_am.svg`
+          alt = ""
+          )
+        .p-star-agency-header__heading-row1
+          +splitStr('Star')
+        .p-star-agency-header__heading-row2
+          +splitStr('Agency')
+      .p-star-agency-header__copy.u-tt-u
+        .p-star-agency-header__copy-col.p-star-agency-header__copy-col--1
+          |Manifest
+        .p-star-agency-header__copy-col.p-star-agency-header__copy-col--2
+          |Your
+        .p-star-agency-header__copy-col.p-star-agency-header__copy-col--3
+          |Universe
+      .p-star-agency-header__labels
+        .p-star-agency-header__label.u-tt-u
+          strong.p-star-agency-header__label-word Brand
+          span.p-star-agency-header__label-word Management
+          span.p-star-agency-header__label-plus +
+          span.p-star-agency-header__label-word Artist Management
+        .p-star-agency-header__label.u-tt-u
+          strong.p-star-agency-header__label-word Business
+          span.p-star-agency-header__label-word Management
+          span.p-star-agency-header__label-plus +
+          span.p-star-agency-header__label-word Business Coaching
+      .p-star-agency-header__guy
+      .p-wheel-icon.js-header-btn
+      .p-star-agency-header__bg
+
+    include ../_sections/_service-list-agency.pug
+    include ../_sections/_dare-quote.pug
+    include ../_sections/_get-started-star.pug
+
+    .p-fullscreen-pager.js-fullscreen-pager
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__bar

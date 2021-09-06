@@ -1,0 +1,139 @@
+.p-section-services.p-fullscreen-section.js-fullscreen-section
+  .p-section-services__body#service-content
+    .p-section-services__image
+      .p-section-services__man-wrap
+        img.p-section-services__man.p-section-services__man--01(
+          src = `${path}/img/index/services/man01.png`
+          alt = ""
+          :class = '{ "is-shown" : currentId === 0 }'
+          )
+        img.p-section-services__man.p-section-services__man--02(
+          src = `${path}/img/index/services/man02.png`
+          alt = ""
+          :class = '{ "is-shown" : currentId === 1 }'
+          )
+        img.p-section-services__man.p-section-services__man--03(
+          src = `${path}/img/index/services/man03.png`
+          alt = ""
+          :class = '{ "is-shown" : currentId === 2 }'
+          )
+      img.p-section-services__copy-v-01(src=`${path}/img/index/services/copy_v_01.svg`, alt="")
+      img.p-section-services__copy-v-02(src=`${path}/img/index/services/copy_v_02.svg`, alt="")
+      img.p-section-services__star(src=`${path}/img/index/star.png`, alt="")
+      .p-section-services__number
+        .p-section-services__number-label.u-tt-u
+          |Dept.
+        .p-section-services__number-count
+          |{{ getNumber }}
+      .p-section-services__navi.c-carousel-navi
+        .c-carousel-navi__item(
+          :class = '{ "is-disabled": currentId === 0 }'
+          @click = 'goToPrev'
+          )
+          +svgArrowL(52)
+        .c-carousel-navi__item(
+          :class = '{ "is-disabled": currentId === maxId }'
+          @click = 'goToNext'
+          )
+          +svgArrowR(52)
+    .p-section-services__content
+      .p-section-services__content-group-wrap
+        .p-section-services__content-group(
+          :class = '{ "is-shown" : currentId === 0 }'
+          )
+          .p-section-services__content-in
+            h2.p-section-services__heading.u-tt-u
+              .p-section-services__heading-sub
+                |THE ARMELIN MEDIA
+              .p-section-services__heading-main
+                |Creative 
+                span Studio
+            p.p-section-services__description
+              |From strategic market positioning to customer acquisition, We’ll arm you with vital analytics and insights to understand and expand your base.
+            ul.p-section-services__list
+              li.p-section-services__list-item
+                |Digital Marketing Strategy
+              li.p-section-services__list-item
+                |Organic SEO & Paid Search
+              li.p-section-services__list-item
+                |Viral Campaign Engineering
+              li.p-section-services__list-item
+                |Sustainable Growth Hacking
+              li.p-section-services__list-item.p-section-services__list-item--more
+                |More
+          a.p-section-services__link(
+            href = `${path}/creative-studio/`
+            )
+            .p-section-services__link-label.u-tt-u
+              |Enter Creative Studio
+              img(
+                src = `${path}/img/common/double_arrow_r.svg`
+                alt = ""
+                )
+        .p-section-services__content-group(
+          :class = '{ "is-shown" : currentId === 1 }'
+          )
+          .p-section-services__content-in
+            h2.p-section-services__heading.u-tt-u
+              .p-section-services__heading-sub
+                |THE ARMELIN MEDIA
+              .p-section-services__heading-main
+                |Strategy 
+                span Ward 
+            p.p-section-services__description
+              |From strategic market positioning to customer acquisition, We’ll arm you with vital analytics and insights to understand and expand your base.
+            ul.p-section-services__list
+              li.p-section-services__list-item
+                |Digital Marketing Strategy
+              li.p-section-services__list-item
+                |Organic SEO & Paid Search
+              li.p-section-services__list-item
+                |Viral Campaign Engineering
+              li.p-section-services__list-item.p-section-services__list-item--more
+                |More
+          a.p-section-services__link(
+            href = `${path}/strategy-ward/`
+            )
+            .p-section-services__link-label.u-tt-u
+              |Enter Strategy Ward
+              img(
+                src = `${path}/img/common/double_arrow_r.svg`
+                alt = ""
+                )
+        .p-section-services__content-group(
+          :class = '{ "is-shown" : currentId === 2 }'
+          )
+          .p-section-services__content-in
+            h2.p-section-services__heading.u-tt-u
+              .p-section-services__heading-sub
+                |THE ARMELIN MEDIA
+              .p-section-services__heading-main
+                |Star 
+                span Agency
+            p.p-section-services__description
+              |From strategic market positioning to customer acquisition, We’ll arm you with vital analytics and insights to understand and expand your base.
+            ul.p-section-services__list
+              li.p-section-services__list-item
+                |Digital Marketing Strategy
+              li.p-section-services__list-item
+                |Organic SEO & Paid Search
+              li.p-section-services__list-item.p-section-services__list-item--more
+                |More
+          a.p-section-services__link(
+            href = `${path}/star-agency/`
+            )
+            .p-section-services__link-label.u-tt-u
+              |Enter Star Agency
+              img(
+                src = `${path}/img/common/double_arrow_r.svg`
+                alt = ""
+                )
+      .p-section-services__hashtag
+        strong #
+        |explore
+        strong dream
+        |discover
+  img.p-section-services__bg(
+    src = `${path}/img/index/services/bg.png`
+    alt = ""
+    )

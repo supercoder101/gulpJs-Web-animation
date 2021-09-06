@@ -1,0 +1,111 @@
+.p-fullscreen-pager {
+  @include l-more-than-mobile {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.5;
+    &__pointer {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      &:before {
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+      &:after {
+        width: 2px;
+        height: 24px;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        background-color: #fff;
+      }
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    //
+    // Interaction
+    //
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: opacity;
+    &.is-shown {
+      opacity: 0.5;
+    }
+    &__bar {
+      @include l-more-than-mobile {
+        transform: scaleY(0);
+      }
+      @include l-mobile {
+        transform: scaleX(0);
+      }
+      .has-animate & {
+        transition-duration: 1s;
+        transition-delay: .5s;
+        transition-property: transform;
+        transition-timing-function: $easeOutCirc;
+        @include l-more-than-mobile {
+          transform: scaleY(1);
+        }
+        @include l-mobile {
+          transform: scaleX(1);
+        }
+      }
+    }
+    &__pointer {
+      transform: scale(0);
+      .has-animate & {
+        transform: scale(1);
+        transition-duration: 1s;
+        transition-delay: .9s;
+        transition-property: transform;
+        transition-timing-function: $easeOutCirc;
+        &:before {
+          transition-duration: .4s;
+          transition-property: width, height, border-color, background-color;
+        }
+        &:after {
+          transition-duration: .4s;
+          transition-property: background-color;
+        }
+        &.is-over:before,
+        &.is-current:before {
+          background-color: #fff;
+        }
+      }
+      .is-shown & {
+        pointer-events: auto;
+      }
+      .is-black & {
+        &:before {
+          border-color: #000;
+        }
+        &:after {
+          background-color: #000;
+        }
+        &.is-over:before,
+        &.is-current:before {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.p-section-studio.p-fullscreen-section.js-fullscreen-section
+  .p-section-studio__in
+    .p-section-studio__header
+      h2.p-section-studio__heading.u-tt-u
+        .p-section-studio__heading-copy-01
+          .p-section-studio__heading-copy-01-1
+            |Latest
+          .p-section-studio__heading-copy-01-2
+            |From the
+        .p-section-studio__heading-copy-02
+          |STUDIO
+    .p-section-studio__items-wrap#latest-studio
+      .p-section-studio__items
+        a.p-section-studio__item.js-hover(
+          v-for = 'item, index in items'
+          :href = "item.href"
+          :class = 'classnamesItem(index)'
+          )
+          .p-section-studio__item-img(
+            :style = 'stylesItem(index)'
+            )
+        a.p-section-studio__view-full.js-hover(
+          href = "https://creative.armelin.media/portfolio"
+          target = "_blank"
+          )
+          .p-section-studio__view-full-label.u-tt-u
+            |View Full Portfolio
+          +svgArrowR(40)(
+            class = 'p-index-studio__view-full-arrow'
+            )
+          img.p-section-studio__view-full-star(
+            src = `${path}/img/index/star.png`
+            alt = ""
+            )
+        .p-section-studio__label-creative
+      .p-section-studio__navi
+        .p-section-studio__navi-item(
+          @click.prevent = 'goPrevGroup'
+          :class = 'classnamesNavPrev'
+          )
+          +svgArrowT(14)
+        .p-section-studio__navi-item(
+          @click.prevent = 'goNextGroup'
+          :class = 'classnamesNavNext'
+          )
+          +svgArrowB(14)
+    .p-section-studio__footer
+      a.p-section-studio__link(
+        href = `${path}/creative-studio/`
+        )
+        .p-section-studio__link-label.u-tt-u
+          |Enter Creative Studio
+        .p-section-studio__link-icon
+      .p-section-studio__hashtag
+        strong #
+        |armelin
+        strong creative
+        |studio
+  .p-section-studio__bg-dna
+  .p-section-studio__bg

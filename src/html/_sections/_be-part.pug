@@ -1,0 +1,57 @@
+.p-section-be-part.p-fullscreen-section.js-fullscreen-section
+  .p-section-be-part__in
+    h2.p-section-be-part__heading.u-tt-u
+      .p-section-be-part__heading-in
+        .p-section-be-part__heading-typo1 Be
+        .p-section-be-part__heading-typo2 Part
+        img.p-section-be-part__heading-star(
+          src = `${path}/img/index/be_part/star_pink.png`
+          alt = ""
+          )
+    .p-section-be-part__items#be-part
+      .p-section-be-part__item(
+        v-for = '(item, index) in items'
+        :style = 'stylesItem(index)'
+        :class = 'classnamesItem(index)'
+        )
+      .p-section-be-part__navi.c-carousel-navi
+        .c-carousel-navi__item(
+          @click.prevent = 'goPrevGroup'
+          :class = 'classnamesNavPrev'
+          )
+          +svgArrowL(52)
+        .c-carousel-navi__item(
+          @click.prevent = 'goNextGroup'
+          :class = 'classnamesNavNext'
+          )
+          +svgArrowR(52)
+    .p-section-be-part__copy-v
+      img.p-section-be-part__copy-v-img(
+        src = `${path}/img/index/be_part/copy_v.svg`
+        alt = ""
+        )
+      img.p-section-be-part__copy-v-icon(
+        src = `${path}/img/common/icon_instagram_p.svg`
+        alt = ""
+        )
+    a.p-section-be-part__follow-us.u-tt-u(
+      href = "https://www.instagram.com/armelin.media/"
+      target = "_blank"
+      )
+      img.p-section-be-part__follow-us-icon(
+        src = `${path}/img/common/icon_instagram.svg`
+        alt = ""
+        )
+      .p-section-be-part__follow-us-typo
+        .p-section-be-part__follow-us-typo1 Follow
+        .p-section-be-part__follow-us-typo2 Us
+    .p-section-be-part__hashtag
+      .p-section-be-part__hashtag-row
+        strong #
+        |explore
+      .p-section-be-part__hashtag-row
+        strong dream
+      .p-section-be-part__hashtag-row
+        |discover
+    .p-section-be-part__line
+    .p-section-be-part__gradation

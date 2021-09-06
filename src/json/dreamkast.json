@@ -1,0 +1,47 @@
+[
+  {
+    "src": "/img/index/dreamkast/thumb01.jpg",
+    "href": "https://dreamkast.armelin.media/",
+    "category": "Design",
+    "title": "ARTICLE TITLE is HERE A",
+    "summary": "Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "dateMonth": "Dec",
+    "dateDay": "018"
+  },
+  {
+    "src": "/img/index/dreamkast/thumb02.jpg",
+    "href": "https://dreamkast.armelin.media/",
+    "category": "Design",
+    "title": "ARTICLE TITLE is HERE B",
+    "summary": "Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt",
+    "dateMonth": "Dec",
+    "dateDay": "018"
+  },
+  {
+    "src": "/img/index/dreamkast/thumb03.jpg",
+    "href": "https://dreamkast.armelin.media/",
+    "category": "Design",
+    "title": "ARTICLE TITLE is HERE C",
+    "summary": "Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor",
+    "dateMonth": "Dec",
+    "dateDay": "018"
+  },
+  {
+    "src": "/img/index/dreamkast/thumb04.jpg",
+    "href": "https://dreamkast.armelin.media/",
+    "category": "Design",
+    "title": "ARTICLE TITLE is HERE D",
+    "summary": "Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+    "dateMonth": "Dec",
+    "dateDay": "018"
+  },
+  {
+    "src": "/img/index/dreamkast/thumb05.jpg",
+    "href": "https://dreamkast.armelin.media/",
+    "category": "Design",
+    "title": "ARTICLE TITLE is HERE E",
+    "summary": "Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore",
+    "dateMonth": "Dec",
+    "dateDay": "018"
+  }
+]

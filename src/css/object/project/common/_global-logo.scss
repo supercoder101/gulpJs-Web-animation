@@ -1,0 +1,29 @@
+.p-global-logo {
+  position: absolute;
+  left: 0;
+  @include l-more-than-mobile {
+    top: 38px;
+  }
+  @include l-mobile {
+    top: 16px;
+    left: 84 / 1080 * 100%;
+  }
+  svg {
+    fill: #fff;
+    @include l-mobile {
+      width: 39px;
+      height: 18px;
+    }
+  }
+  &.is-mounted {
+    svg {
+      transition-duration: .4s;
+      transition-property: fill;
+    }
+  }
+  &.is-black {
+    svg {
+      fill: #000;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.l-contents {
+  width: 100%;
+  overflow: hidden;
+  line-height: 2;
+  position: relative;
+  z-index: 10;
+  @include fontSizeAll(14, 14, 12);
+}

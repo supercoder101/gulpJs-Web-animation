@@ -1,0 +1,75 @@
+@keyframes loopCloud {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+    transform: scale3d(1.8, 1.8, 1);
+  }
+}
+
+.p-intro-clouds {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  @include l-more-than-mobile {
+    padding-top: 140 / 1024 * 100%;
+  }
+  @include l-mobile-l {
+    padding-top: 140 / 1024 * 100%;
+  }
+  @include l-mobile-p {
+    padding-top: 100 / 375 * 100%;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    transform-origin: center 10%;
+    animation-name: loopCloud;
+    animation-duration: 1.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    &--01 {
+      background-image: url('../img/intro/cloud01.png');
+    }
+    &--02 {
+      background-image: url('../img/intro/cloud02.png');
+      animation-delay: .6s;
+    }
+    &--03 {
+      background-image: url('../img/intro/cloud03.png');
+      animation-delay: 1.2s;
+    }
+  }
+  //
+  // Animation
+  //
+  opacity: 0;
+  &.is-shown, &.is-hidden {
+    transition-property: opacity, transform;
+  }
+  &.is-shown {
+    opacity: 1;
+    transition-duration: 3s;
+    transition-delay: 1.3s;
+  }
+  &.is-hidden {
+    opacity: 0;
+    transform: scale(1.4);
+    transition-duration: 4s;
+    transition-delay: 0s;
+  }
+}

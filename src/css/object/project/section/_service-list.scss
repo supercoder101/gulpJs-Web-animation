@@ -1,0 +1,454 @@
+.p-service-list {
+  display: flex;
+  align-items: stretch;
+  @include l-mobile {
+    flex-direction: column;
+  }
+  &__content {
+    position: relative;
+    @include l-more-than-mobile {
+      width: 50%;
+    }
+    @include l-mobile {
+      flex-shrink: 0;
+      padding-top: calc(38px + #{(294 / 1080 * 100%)});
+      padding-bottom: (112 / 1080 * 100%);
+    }
+  }
+  &__heading {
+    line-height: 1;
+    position: absolute;
+    z-index: 10;
+    margin-top: -0.5em;
+    @include l-more-than-mobile {
+      width: 444px;
+      top: 123px;
+      right: 0;
+      font-size: (36 / 1920) * 100vw;
+    }
+    @include l-mobile {
+      top: 65px;
+      left: (240 / 3) * 1px;
+      font-size: (52 / 1080) * 100vw;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+    @include l-more-than-mobile {
+      width: 770 / 960 * 100%;
+      position: absolute;
+      top: 240px;
+      right: 70 / 960 * 100%;
+    }
+    @include l-mobile {
+      position: relative;
+      margin-right: 54 / 3 * 1px;
+      margin-left: 54 / 3 * 1px;
+    }
+  }
+  &__item {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    @include l-more-than-mobile {
+      margin-bottom: 60 / 770 * 100%;
+      padding-left: 80px;
+    }
+    @include l-mobile {
+      margin-bottom: 30px;
+      padding-left: 40px;
+    }
+  }
+  &__item-icon {
+    position: absolute;
+    left: 0;
+    @include l-more-than-mobile {
+      top: -40px;
+    }
+    @include l-mobile {
+      width: 32px;
+      height: 32px;
+      top: -20px;
+    }
+  }
+  &__item-heading {
+    line-height: 1;
+    text-transform: uppercase;
+    @include l-more-than-mobile {
+      margin-bottom: 20px;
+      font-size: (20 / 1920) * 100vw;
+    }
+    @include l-mobile {
+      margin-bottom: 8px;
+      font-size: (28 / 1080) * 100vw;
+    }
+  }
+  &__item-summary {
+    line-height: (20 / 14);
+    font-weight: 100;
+    @include l-more-than-mobile {
+      font-size: (14 / 1920) * 100vw;
+    }
+    @include l-mobile {
+      font-size: (20 / 1080) * 100vw;
+    }
+  }
+  &__hashtag {
+    @include l-more-than-mobile {
+      position: absolute;
+      left: 70 / 960 * 100%;
+      bottom: 0;
+      z-index: 10;
+      margin-bottom: 60 / 960 * 100%;
+      font-size: (20 / 1920) * 100vw;
+      font-weight: 100;
+    }
+    @include l-mobile {
+      display: none;
+    }
+  }
+  &__button {
+    z-index: 10;
+    @include l-more-than-mobile {
+      width: 205px;
+      height: 42px;
+      position: absolute;
+      right: 160 / 960 * 100%;
+      bottom: 0;
+      margin-bottom: 40 / 960 * 100%;
+      font-size: (16 / 1920) * 100vw;
+    }
+    @include l-mobile {
+      width: 140px;
+      height: 28px;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: (32 / 1920) * 100vw;
+    }
+  }
+  &__button-in {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+    letter-spacing: 0.07em;
+    strong {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    @include l-more-than-mobile {
+      width: 205px;
+      height: 42px;
+      border-radius: 10px 0 10px 0;
+    }
+    @include l-mobile {
+      width: 140px;
+      height: 28px;
+      border-radius: 4px 0 4px 0;
+    }
+    &.is-over, &.is-leave {
+      transition-duration: .2s;
+      transition-property: color, background-color;
+    }
+    &.is-over {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+  &__content-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/section/service-list/bg01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__image {
+    overflow: hidden;
+    position: relative;
+    @include l-more-than-mobile {
+      width: 50%;
+    }
+    @include l-mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__copy {
+    line-height: 1;
+    position: absolute;
+    z-index: 30;
+    @include l-more-than-mobile {
+      bottom: 0;
+      left: 120 / 960 * 100%;
+      margin-bottom: 390 / 960 * 100%;
+      font-size: (36 / 1920) * 100vw;
+    }
+    @include l-mobile {
+      font-size: (36 / 1080) * 100vw;
+      bottom: 0;
+      left: 165 / 1080 * 100%;
+      margin-bottom: 64 / 1080 * 100%;
+    }
+  }
+  &__copy-col1 {
+    font-weight: 100;
+  }
+  &__copy-col2 {
+    font-weight: 700;
+  }
+  &__copy-col3 {
+    color: $color-key;
+    font-weight: 700;
+  }
+  &__butterfly {
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    @include l-more-than-mobile {
+      width: 588 / 960 * 100%;
+      left: -80 / 960 * 100%;
+      margin-bottom: 370 / 960 * 100%;
+    }
+    @include l-mobile {
+      width: 535 / 1080 * 100%;
+      left: -80 / 1080 * 100%;
+      margin-bottom: 40 / 1080 * 100%;
+    }
+  }
+  &__star {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    @include l-more-than-mobile {
+      width: 460 / 960 * 100%;
+      bottom: 10px;
+    }
+    @include l-mobile {
+      width: 450 / 1080 * 100%;
+      bottom: 0;
+      margin-bottom: -28%;
+    }
+  }
+  &__image-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &--creative {
+      @include l-more-than-mobile {
+        background-image: url('../img/section/service-list/bg02.png');
+      }
+      @include l-mobile {
+        background-image: url('../img/section/service-list/bg02_sp.png');
+        background-position: bottom;
+      }
+    }
+    &--strategy {
+      background-image: url('../img/section/service-list/bg03.jpg');
+    }
+  }
+
+  //
+  // Animation
+  //
+  &__heading {
+    opacity: 0;
+    transform: translateY(-10px);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 1s;
+      transition-delay: .4s;
+    }
+    .is-hidden & {
+      transition-duration: .6s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+  }
+  &__item {
+    opacity: 0;
+    transform: translateY(10px);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 1s;
+      @include iterateTransitionDelay(6, 0.05, 0.6);
+    }
+    .is-hidden & {
+      transition-duration: 1s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition-duration: .6s;
+      @include iterateTransitionDelay(6, 0.02, 0);
+    }
+  }
+  &__hashtag {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: .9s;
+    }
+    .is-hidden & {
+      transition-duration: .6s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+  }
+  &__button {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: 1s;
+    }
+    .is-hidden & {
+      transition-duration: .6s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+  }
+  &__content-bg {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+    }
+    .is-hidden & {
+      transition-duration: .6s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+    }
+  }
+  &__copy {
+    opacity: 0;
+    transform: translateY(10px);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 1s;
+      transition-delay: .6s;
+    }
+    .is-hidden & {
+      transition-duration: .6s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+  }
+  &__butterfly {
+    opacity: 0;
+    transform: translateY(10px);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 1s;
+      transition-delay: .8s;
+    }
+    .is-hidden & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .6s;
+      transition-delay: 0s;
+    }
+  }
+  &__star {
+    opacity: 0;
+    transform: scale(1.1);
+    transform-origin: left;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+      transition-timing-function: $easeOutCubic;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 2s;
+      transition-delay: .4s;
+    }
+    .is-hidden & {
+      transition-duration: 1s;
+      transition-delay: 0s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transform: scale(.9);
+      transition-duration: 1s;
+      transition-delay: 0s;
+    }
+  }
+  &__image-bg {
+    opacity: 0;
+    transform: scale(1.05);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+      transition-timing-function: $easeOutCubic;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 2s;
+    }
+    .is-hidden & {
+      transition-duration: 1s;
+    }
+    .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: 1s;
+    }
+  }
+}

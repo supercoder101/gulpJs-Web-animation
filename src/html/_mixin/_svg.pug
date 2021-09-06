@@ -1,0 +1,59 @@
+mixin svg(width, widthBase, heightBase)
+  svg(
+    xmlns = "http://www.w3.org/2000/svg",
+    role = (attributes.role) ? attributes.role : 'img',
+    aria-labelledby != `${attributes.id}-title`,
+    width = width,
+    height = Math.ceil(width * heightBase / widthBase),
+    viewBox = `0 0 ${widthBase} ${heightBase}`,
+    id != attributes.id,
+    class != attributes.class,
+  )
+    if (attributes.title)
+      title(
+        id = `${attributes.id}-title`
+        )
+        |#{attributes.title}
+    block
+
+mixin svgAMLogo(width)
+  +svg(width, 93.6, 40.3)(
+    class = (attributes.class) ? `${attributes.class} c-armelin-media-logo` : 'c-armelin-media-logo'
+    )
+    path(d="M90.1 9.9c-3.1-5.7-7.9-7.5-7.9-7.5-5.9-2.7-11.3-.7-11.3-.7-4.2 1.1-7.5 4.4-7.5 4.4-.2-.3-2.6-2.6-4.6-3.5s-3-1.5-7.1-1.7c-4.1-.3-7.5 1.7-7.5 1.7V1.3H20.6S12 1.1 5.7 8.4c-6.4 7.4-3.4 17.5-3.4 17.5s1.4 5.9 7.7 10.4c6.3 4.4 15.3 3 17.2 1.4l.1-.1v1.9h16.8V17.7c.2-3.3 2-4.9 2-4.9 2.1-2.3 5-2.1 5-2.1 3 0 4.6 1.8 4.6 1.8 2.5 2.3 2.2 6.2 2.2 6.2v20.7h10l.2-21.8c.2-2.5 1.1-3.6 1.1-3.6.7-.8 1.8-3 5.9-3.2s6 3.6 6 3.6c.9 1.6.8 4.4.8 4.4l-.1 20.6H92V16.3c-.2-3.4-1.9-6.4-1.9-6.4zM27.2 28.4s-8.9 4.9-14.4-3c0 0-3.7-5.7 1.1-11.9 0 0 2.3-3.3 7-3.3h6.3v18.2zm13.3-.3l-4.9-2.7-4.9 2.6.9-5.5-4-3.9 5.5-.8 2.5-5 2.4 5.1 5.6.8-4.1 3.9 1 5.5z")
+
+mixin svgStar(width)
+  +svg(width, 24, 23)(
+    class = (attributes.class) ? `${attributes.class} c-star` : 'c-star'
+    )
+    path(d="M13.3.8l2.9 5.9 6.6 1c1.2.2 1.6 1.6.8 2.5l-4.7 4.6 1.1 6.5c.2 1.2-1 2.1-2.1 1.5L12 19.7l-5.9 3.1c-1 .6-2.3-.3-2.1-1.5l1.1-6.5-4.7-4.6c-.9-.8-.4-2.3.8-2.5l6.6-1L10.7.8c.6-1.1 2.1-1.1 2.6 0z")
+
+mixin svgPackages(width)
+  +svg(width, 23, 22.6)(
+    class = (attributes.class) ? `${attributes.class} c-packages` : 'c-packages'
+    )
+    path(d="M12.3.1l9.3 3.5c.8.4 1.4 1.2 1.4 2.1v10.1c0 .8-.5 1.6-1.2 1.9l-9.3 4.7c-.6.3-1.3.3-1.9 0l-9.3-4.7C.5 17.3 0 16.6 0 15.8V5.7c0-.9.6-1.7 1.4-2L10.7.2c.5-.2 1.1-.2 1.6-.1zM2.9 6.2l8.6 3.6 8.6-3.5-8.6-3.2-8.6 3.1zm17.2 9.1v-6l-7.2 2.9v6.7l7.2-3.6z")
+
+mixin svgArrowT(width)
+  +svg(width, 23, 51)(
+    class = (attributes.class) ? `${attributes.class} c-arrow-t` : 'c-arrow-t'
+    )
+    path(fill-rule="evenodd" d="M22.424 21.791a1.973 1.973 0 0 1-2.806 0L3.969 6.024v42.992A1.984 1.984 0 0 1 1.985 51h-.001A1.984 1.984 0 0 1 0 49.016V2.015C0 .919.888.031 1.984.031h.001c.146 0 .287.018.424.048.626-.123 1.294.023 1.779.512l18.236 18.373a2.01 2.01 0 0 1 0 2.827z")
+    
+mixin svgArrowB(width)
+  +svg(width, 23, 52)(
+    class = (attributes.class) ? `${attributes.class} c-arrow-b` : 'c-arrow-b'
+    )
+    path(fill-rule="evenodd" d="M21.016 51h-.001c-.146 0-.287-.018-.424-.048-.626.123-1.294-.023-1.779-.512L.576 32.055a2.01 2.01 0 0 1 0-2.828 1.973 1.973 0 0 1 2.806 0l15.649 15.777V1.984C19.031.888 19.919 0 21.015 0h.001C22.112 0 23 .888 23 1.984v47.032A1.984 1.984 0 0 1 21.016 51z")
+
+mixin svgArrowR(width)
+  +svg(width, 52, 24)(
+    class = (attributes.class) ? `${attributes.class} c-arrow-r` : 'c-arrow-r'
+    )
+    path(fill-rule="evenodd" d="M50.44 4.222L32.055 22.607a2 2 0 1 1-2.828-2.829L45.005 4H2a2 2 0 1 1 0-4h47a2 2 0 0 1 1.952 2.428c.123.631-.023 1.305-.512 1.794z")
+
+mixin svgArrowL(width)
+  +svg(width, 51, 23)(
+    class = (attributes.class) ? `${attributes.class} c-arrow-l` : 'c-arrow-l'
+    )
+    path(fill-rule="evenodd" d="M49.016 23H2.015a1.984 1.984 0 0 1-1.936-2.409c-.123-.626.023-1.294.512-1.779L18.964.576a2.01 2.01 0 0 1 2.827 0 1.973 1.973 0 0 1 0 2.806L6.023 19.032h42.993a1.984 1.984 0 0 1 0 3.968z")

@@ -1,0 +1,70 @@
+extends ../_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.strategyWard;
+
+block content
+  .p-fullscreen-wrap.js-fullscreen-wrap
+    .p-strategy-ward-header.p-fullscreen-section.js-fullscreen-section
+      .p-strategy-ward-header__heading.u-tt-u
+        img.p-strategy-ward-header__heading-logo(
+          src = `${path}/img/common/logo_am.svg`
+          alt = ""
+          )
+        .p-strategy-ward-header__heading-row1
+          +splitStr('Strategy')
+        .p-strategy-ward-header__heading-row2
+          +splitStr('Ward')
+      .p-strategy-ward-header__wave-wrap.js-svg-wave-wrap
+        svg.p-strategy-ward-header__wave(
+          viewBox = '0 0 623 225'
+          width = '623'
+          height = '225'
+          )
+          mask#svg-wave-mask
+            image(
+              width = '623'
+              height = '225'
+              x = '0'
+              y = '0'
+              xlink:href = `${path}/img/strategy-ward/wave_clippath.png`
+              )
+          rect(
+            width = '623'
+            height = '225'
+            x = '0'
+            y = '0'
+            fill = 'rgba(255, 255, 255, 0.05)'
+            mask = 'url(#svg-wave-mask)'
+            )
+          image.js-svg-wave-image(
+            width = '1246'
+            height = '225'
+            x = '0'
+            y = '0'
+            mask = 'url(#svg-wave-mask)'
+            xlink:href = `${path}/img/strategy-ward/wave_light.png`
+            )
+      .p-strategy-ward-header__apparatus
+      .p-wheel-icon.js-header-btn
+      .p-strategy-ward-header__bg-wave
+      .p-strategy-ward-header__bg
+
+    include ../_sections/_service-list-strategy.pug
+    include ../_sections/_think-big-quote.pug
+    include ../_sections/_clients.pug
+    include ../_sections/_get-started.pug
+
+    .p-fullscreen-pager.js-fullscreen-pager
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__bar

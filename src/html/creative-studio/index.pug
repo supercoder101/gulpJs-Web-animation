@@ -1,0 +1,58 @@
+extends ../_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.creativeStudio;
+
+block content
+  .p-fullscreen-wrap.js-fullscreen-wrap
+    .p-creative-studio-header.p-fullscreen-section.js-fullscreen-section
+      .p-creative-studio-header__heading.u-tt-u
+        img.p-creative-studio-header__heading-logo(
+          src = `${path}/img/common/logo_am.svg`
+          alt = ""
+          )
+        .p-creative-studio-header__heading-row1
+          +splitStr('Creative')
+        .p-creative-studio-header__heading-row2
+          +splitStr('Studio')
+      img.p-creative-studio-header__cursive(
+        src = `${path}/img/creative-studio/cursive.png`
+        alt = 'Create With Purpose.'
+        )
+      .p-creative-studio-header__labels
+        .p-creative-studio-header__label.u-tt-u
+          span.p-creative-studio-header__label-word Websites
+          span.p-creative-studio-header__label-plus +
+          span.p-creative-studio-header__label-word Apps
+        .p-creative-studio-header__label.u-tt-u
+          span.p-creative-studio-header__label-word Logos
+          span.p-creative-studio-header__label-plus +
+          span.p-creative-studio-header__label-word Branding
+        .p-creative-studio-header__label.u-tt-u
+          span.p-creative-studio-header__label-word 3D
+          span.p-creative-studio-header__label-plus +
+          span.p-creative-studio-header__label-word Animation
+      .p-wheel-icon.js-header-btn
+      .p-creative-studio-header__bg
+
+    include ../_sections/_service-list-creative.pug
+    include ../_sections/_studio.pug
+    include ../_sections/_create-purpose-quote.pug
+    include ../_sections/_clients.pug
+    include ../_sections/_get-started.pug
+
+    .p-fullscreen-pager.js-fullscreen-pager
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__pointer.js-fullscreen-pager-pointer
+        .p-fullscreen-pager__pointer-label 
+      .p-fullscreen-pager__bar

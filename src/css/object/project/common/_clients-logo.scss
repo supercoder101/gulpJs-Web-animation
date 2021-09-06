@@ -1,0 +1,83 @@
+.p-clients-logo {
+  display: block;
+  &--atlantic {
+    @include l-more-than-mobile {
+      width: 73px;
+      height: 47px;
+    }
+    @include l-mobile {
+      width: (111 / 3) * 1px;
+      height: (72 / 3) * 1px;
+    }
+  }
+  &--badboy {
+    @include l-more-than-mobile {
+      width: 67px;
+      height: 67px;
+    }
+    @include l-mobile {
+      width: (99 / 3) * 1px;
+      height: (102 / 3) * 1px;
+    }
+  }
+  &--bet {
+    @include l-more-than-mobile {
+      width: 80px;
+      height: 38px;
+    }
+    @include l-mobile {
+      width: (118 / 3) * 1px;
+      height: (56 / 3) * 1px;
+    }
+  }
+  &--cavi {
+    @include l-more-than-mobile {
+      width: 55px;
+      height: 53px;
+    }
+    @include l-mobile {
+      width: (81 / 3) * 1px;
+      height: (81 / 3) * 1px;
+    }
+  }
+  &--cisco {
+    @include l-more-than-mobile {
+      width: 86px;
+      height: 46px;
+    }
+    @include l-mobile {
+      width: (128 / 3) * 1px;
+      height: (68 / 3) * 1px;
+    }
+  }
+  &--element {
+    @include l-more-than-mobile {
+      width: 89px;
+      height: 30px;
+    }
+    @include l-mobile {
+      width: (132 / 3) * 1px;
+      height: (44 / 3) * 1px;
+    }
+  }
+  &--fourfront {
+    @include l-more-than-mobile {
+      width: 60px;
+      height: 62px;
+    }
+    @include l-mobile {
+      width: (90 / 3) * 1px;
+      height: (90 / 3) * 1px;
+    }
+  }
+  &--igive {
+    @include l-more-than-mobile {
+      width: 92px;
+      height: 55px;
+    }
+    @include l-mobile {
+      width: (136 / 3) * 1px;
+      height: (79 / 3) * 1px;
+    }
+  }
+}

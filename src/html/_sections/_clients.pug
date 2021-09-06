@@ -1,0 +1,127 @@
+.p-section-clients.p-fullscreen-section.js-fullscreen-section
+  .p-section-clients__in
+    h2.p-section-clients__heading.u-tt-u
+      img.p-section-clients__heading-typo1(
+        src = `${path}/img/section/clients/title_our.svg`
+        alt = ""
+        )
+      .p-section-clients__heading-typo2
+        |Clients
+    #our-clients
+      .p-section-clients__list-wrap
+        h3.p-section-clients__list-heading.u-tt-u
+          |Folks we’ve had the
+          br
+          strong pleasure 
+          |to work with
+        h4.p-section-clients__list-sub-heading.u-tt-u
+          strong Celebrity 
+          |Clients
+        ul.p-section-clients__list
+          li.p-section-clients__list-item.u-tt-u(
+            v-for = 'item, index in itemsCelebrity'
+            :class = 'classnamesItem(index)'
+            @click.prevent = 'showCelebrity(index)'
+            )
+            .p-section-clients__list-item-star
+            |{{ item.companyName }}
+      .p-section-clients__content
+        .p-section-clients__content-in
+          .p-section-clients__detail
+            h3.p-section-clients__detail-heading
+              .p-section-clients__detail-heading-thumb
+                img(
+                  :src = 'getSrcThumb'
+                  alt = ""
+                  )
+              img.p-section-clients__detail-heading-quote(
+                src = `${path}/img/section/clients/quotation.svg`
+                alt = ""
+                )
+              .p-section-clients__detail-heading-name-wrap
+                .p-section-clients__detail-heading-name.u-tt-u
+                  |{{ getPersonName }}
+                .p-section-clients__detail-heading-position.u-tt-u
+                  |{{ getPersonRole }}
+              .p-section-clients__detail-heading-logo
+                img.p-clients-logo(
+                  :src = 'getSrcLogo'
+                  :class = 'getLogoModifier'
+                  alt = ""
+                  )
+            .p-section-clients__detail-content
+              |{{ getSummary }}
+            .p-section-clients__detail-link.u-tt-u
+              a(
+                :href = "getHref"
+                )
+                |Recomended via
+                img.p-section-clients__detail-icon.u-no-selection(
+                  src = `${path}/img/common/icon_linkedin.svg`
+                  alt = ""
+                  )
+            .p-section-clients__detail-navi
+              .p-section-clients__detail-navi-item.p-section-clients__detail-navi-item--prev(
+                @click.prevent = 'goPrevTestimonial'
+                :class = 'classnamesNavPrev'
+                )
+                img.u-no-selection(
+                  src = `${path}/img/common/arrow_l.svg`
+                  alt = ""
+                  )
+              .p-section-clients__detail-navi-item.p-section-clients__detail-navi-item--next(
+                @click.prevent = 'goNextTestimonial'
+                :class = 'classnamesNavNext'
+                )
+                img.u-no-selection(
+                  src = `${path}/img/common/arrow_r.svg`
+                  alt = ""
+                  )
+          .p-section-clients__corporate
+            h3.p-section-clients__corporate-heading.u-tt-u
+              strong Our Corporate 
+              |Clients
+            .p-section-clients__corporate-list
+              .p-section-clients__corporate-list-row.p-section-clients__corporate-list-row--01
+                img.p-clients-logo.p-clients-logo--cisco(
+                  src = `${path}/img/section/clients/logo_cisco_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--badboy(
+                  src = `${path}/img/section/clients/logo_badboy_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--atlantic(
+                  src = `${path}/img/section/clients/logo_atlantic_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--bet(
+                  src = `${path}/img/section/clients/logo_bet_b.svg`
+                  alt = ""
+                  )
+              .p-section-clients__corporate-list-row.p-section-clients__corporate-list-row--02
+                img.p-clients-logo.p-clients-logo--igive(
+                  src = `${path}/img/section/clients/logo_igive_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--cavi(
+                  src = `${path}/img/section/clients/logo_cavi_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--fourfront(
+                  src = `${path}/img/section/clients/logo_fourfront_b.svg`
+                  alt = ""
+                  )
+                img.p-clients-logo.p-clients-logo--element(
+                  src = `${path}/img/section/clients/logo_element_b.svg`
+                  alt = ""
+                  )
+        .p-section-clients__content-bg01
+        .p-section-clients__content-bg02
+      .p-section-clients__person(
+        v-for = 'item, index in itemsCelebrity'
+        :class = 'classnamesPerson(index)'
+        :style = 'stylesPerson(index)'
+        )
+  .p-section-clients__bg1
+  .p-section-clients__bg2

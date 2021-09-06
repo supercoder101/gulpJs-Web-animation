@@ -1,0 +1,323 @@
+$sizeOutPc: 42px;
+$sizeOutSp: 42px;
+$sizeInPc: 42px;
+$sizeInSp: 21px;
+$lineWidthPc: 2px;
+$lineWidthSp: 2px;
+
+.p-hamburger {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  @include l-more-than-mobile {
+    width: $sizeOutPc;
+    height: $sizeOutPc;
+    top: 38px;
+    right: 18px;
+  }
+  @include l-mobile {
+    width: $sizeOutSp;
+    height: $sizeOutSp;
+    top: 6px;
+    right: calc(84 / 1080 * 100%);
+  }
+  &__line {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 1px;
+    @include l-more-than-mobile {
+      height: $lineWidthPc;
+    }
+    @include l-mobile {
+      height: $lineWidthSp;
+    }
+    &--01, &--02, &--03, &--cross01, &--cross02 {
+      @include l-more-than-mobile {
+        right: ($sizeOutPc - $sizeInPc) / 2;
+      }
+      @include l-mobile {
+        right: ($sizeOutSp - $sizeInSp) / 2;
+      }
+    }
+    &--01 {
+      @include l-more-than-mobile {
+        width: ceil($sizeInPc * 0.66);
+        top: $sizeOutPc * 0.5 - $lineWidthPc - 8;
+      }
+      @include l-mobile {
+        width: ceil($sizeInSp * 0.66);
+        top: $sizeOutSp * 0.5 - $lineWidthSp - 5;
+      }
+    }
+    &--02 {
+      @include l-more-than-mobile {
+        width: ceil($sizeInPc * 0.83);
+      }
+      @include l-mobile {
+        width: ceil($sizeInSp * 0.83);
+      }
+    }
+    &--02, &--cross01, &--cross02 {
+      @include l-more-than-mobile {
+        top: $sizeOutPc * 0.5 - $lineWidthPc;
+      }
+      @include l-mobile {
+        top: $sizeOutSp * 0.5 - $lineWidthSp;
+      }
+    }
+    &--03 {
+      @include l-more-than-mobile {
+        top: $sizeOutPc * 0.5 - $lineWidthPc + 8;
+      }
+      @include l-mobile {
+        top: $sizeOutSp * 0.5 - $lineWidthSp + 5;
+      }
+    }
+    &--03, &--cross01, &--cross02 {
+      @include l-more-than-mobile {
+        width: $sizeInPc;
+      }
+      @include l-mobile {
+        width: $sizeInSp;
+      }
+    }
+    &--cross01 {
+      transform: rotate(45deg);
+    }
+    &--cross02 {
+      transform: rotate(-45deg);
+    }
+    &-in {
+      width: 300%;
+      position: absolute;
+      top: 0; left: 0;
+      @include l-more-than-mobile {
+        height: $lineWidthPc;
+      }
+      @include l-mobile {
+        width: $sizeInSp * 3;
+        height: $lineWidthSp;
+      }
+      &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        backface-visibility: hidden;
+        @include l-more-than-mobile {
+          height: $lineWidthPc;
+        }
+        @include l-mobile {
+          height: $lineWidthSp;
+        }
+      }
+      &:after {
+        left: 0;
+      }
+      &--01 {
+        &:before, &:after {
+          @include l-more-than-mobile {
+            width: ceil($sizeInPc * 0.66);
+          }
+          @include l-mobile {
+            width: ceil($sizeInSp * 0.66);
+          }
+        }
+        &:before {
+          @include l-more-than-mobile {
+            left: ceil($sizeInPc * 0.66) * -2;
+          }
+          @include l-mobile {
+            left: ceil($sizeInSp * 0.66) * -2;
+          }
+        }
+      }
+      &--02 {
+        &:before, &:after {
+          @include l-more-than-mobile {
+            width: ceil($sizeInPc * 0.83);
+          }
+          @include l-mobile {
+            width: ceil($sizeInSp * 0.83);
+          }
+        }
+        &:before {
+          @include l-more-than-mobile {
+            left: ceil($sizeInPc * 0.83) * -2;
+          }
+          @include l-mobile {
+            left: ceil($sizeInSp * 0.83) * -2;
+          }
+        }
+      }
+      &--03, &--cross01, &--cross02 {
+        &:before, &:after {
+          @include l-more-than-mobile {
+            width: $sizeInPc;
+          }
+          @include l-mobile {
+            width: $sizeInSp;
+          }
+        }
+        &:before {
+          @include l-more-than-mobile {
+            left: $sizeInPc * -2;
+          }
+          @include l-mobile {
+            left: $sizeInSp * -2;
+          }
+        }
+      }
+    }
+
+  }
+  //
+  // Interaction
+  //
+  &__line {
+    &-in {
+      &--01, &--02, &--03 {
+        &:before, &:after {
+          transform: translateX(-100%);
+          background-color: #fff;
+        }
+      }
+      &--cross01, &--cross02 {
+        transform: translateX(-33.3%);
+        &:before, &:after {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  &.is-mounted & {
+    &__line {
+      transition-duration: 0.6s;
+      transition-timing-function: $easeOutExpo;
+      &-in {
+        transition-duration: 0.6s;
+        transition-timing-function: $easeOutExpo;
+        &:before, &:after {
+          transition-timing-function: $easeOutExpo;
+          transition-property: transform, background-color;
+        }
+        &--01 {
+          transition-delay: 0.2s;
+        }
+        &--02 {
+          transition-delay: 0.25s;
+          &:before, &:after {
+            transition-delay: 0.05s;
+          }
+        }
+        &--03 {
+          transition-delay: 0.3s;
+          &:before, &:after {
+            transition-delay: 0.1s;
+          }
+        }
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 1s;
+            transform: translateX(0);
+          }
+        }
+        &--cross01 {
+          transition-delay: 0.0s;
+        }
+        &--cross02 {
+          transition-delay: 0.05s;
+          &:before, &:after {
+            transition-delay: 0.1s;
+          }
+        }
+      }
+    }
+  }
+  &.is-mounted.is-black & {
+    &__line {
+      &-in {
+        &--01, &--02, &--03, &--cross01, &--cross02 {
+          &:before, &:after {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+  &.is-mounted.is-opened-navi & {
+    &__line {
+      &-in {
+        &:before, &:after {
+        }
+        &--01, &--02, &--03 {
+          transform: translateX(33.3%);
+        }
+        &--cross01, &--cross02 {
+          transform: translateX(0);
+        }
+        &--01 {
+          transition-delay: 0s;
+        }
+        &--02 {
+          transition-delay: 0.05s;
+        }
+        &--03 {
+          transition-delay: 0.1s;
+        }
+        &--cross01 {
+          transition-delay: 0.25s;
+        }
+        &--cross02 {
+          transition-delay: 0.3s;
+        }
+      }
+    }
+  }
+  &.is-mounted.is-over & {
+    &__line {
+      &-in {
+        &:before, &:after {
+          transform: translateX(200%);
+        }
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 1s;
+          }
+        }
+        &--cross01, &--cross02 {
+          &:before, &:after {
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+  &.is-mounted.is-opened-navi.is-over & {
+    &__line {
+      &-in {
+        &--cross01, &--cross02 {
+          &:before, &:after {
+            transition-duration: 1s;
+          }
+        }
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+  &.is-mounted.is-leave & {
+    &__line {
+      &-in {
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.p-index-header-content {
+  width: 100%;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  @include l-pc {
+    bottom: 85px;
+  }
+  @include l-tablet-l {
+    bottom: 85px;
+  }
+  @include l-tablet-p {
+    bottom: 120 / 1024 * 100%;
+  }
+  @include l-mobile {
+    bottom: 60px;
+  }
+  &__heading {
+    margin-top: 0;
+    @include l-more-than-mobile {
+      margin-bottom: 20px;
+    }
+    @include l-mobile {
+      margin-bottom: 15px;
+    }
+  }
+  &__head-logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    @include l-more-than-mobile {
+      margin-bottom: 20px;
+    }
+    @include l-mobile {
+      margin-bottom: 15px;
+    }
+  }
+  &__head-label {
+    display: block;
+    line-height: 1;
+    text-align: center;
+    @include fontSizeAll(20, 20, 16);
+    font-weight: 400;
+    letter-spacing: 1em;
+    padding-left: 1em;
+  }
+  &__excerpt {
+    line-height: (22 / 18);
+    margin: 0;
+    font-weight: 100;
+    @include fontSizeAll(18, 18, 14);
+  }
+
+  //
+  // Animation
+  //
+  &__head-logo {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: 1.08s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .5s;
+      transition-delay: 0s;
+    }
+  }
+  &__head-label {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: 1.16s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .5s;
+      transition-delay: 0s;
+    }
+  }
+  &__excerpt {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: 1.24s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .5s;
+      transition-delay: 0s;
+    }
+  }
+}

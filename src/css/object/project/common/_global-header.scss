@@ -1,0 +1,44 @@
+.p-global-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  @include l-more-than-mobile {
+    min-width: 1100px;
+  }
+  @include l-mobile {
+  }
+  &__in {
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include l-more-than-mobile {
+      top: 68px;
+    }
+    @include l-mobile {
+      top: 38px;
+    }
+    @include l-more-than-mobile {
+      width: 1100px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  //
+  // Interaction
+  //
+  &__in {
+    opacity: 0;
+    pointer-events: none;
+    &.is-mounted {
+      transition-duration: .4s;
+      transition-property: opacity;
+    }
+    &.is-mounted.is-shown {
+      opacity: 0.8;
+      pointer-events: auto;
+    }
+  }
+}

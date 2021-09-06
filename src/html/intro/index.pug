@@ -1,0 +1,60 @@
+extends ../_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.intro;
+
+block content
+  .p-intro-content
+    .p-intro-scene1
+      img.p-intro-scene1__logo(src=`${path}/img/common/logo_am.svg`, width="138", alt="")
+      h1.p-intro-scene1__sitename
+        |ARMELIN MEDIA
+      .p-intro-scene1__copy.u-tt-u
+        |the 
+        strong premier marketing 
+        |& 
+        strong Management Agency
+        br
+        |for the dreamer who’s ready to advance.
+      .p-intro-scene1__tagline.u-tt-u
+        |web / branding / PR / Strategy
+      .p-intro-scene1__arrow
+        img(src=`${path}/img/intro/arrow.png`, alt="")
+
+    .p-intro-scene2
+      .p-intro-scene2__main-copy.u-tt-u
+        span.p-intro-scene2__main-copy-col.p-intro-scene2__main-copy-col--01
+          |You’ve 
+          strong dreamed it. 
+        span.p-intro-scene2__main-copy-col.p-intro-scene2__main-copy-col--02
+          |You’ve 
+          strong wished it.
+        br
+        span.p-intro-scene2__main-copy-col.p-intro-scene2__main-copy-col--03
+          strong Now, 
+          |let’s 
+          strong make it happen. 
+      .p-intro-scene2__sub-copy
+        |The distance between dreams and reality is measured by action. 
+        strong Armelin Media 
+        br.u-dn-mobile-p
+        |has the resources & expertise to help pilot your dreams and propel your action.
+      .p-intro-scene2__link
+        a.p-intro-scene2__link-btn.u-tt-u.js-go-to-index.js-pjax-excluded.js-hover(
+          href = `${path}/`
+          )
+          strong Discover 
+          |us
+
+    .p-intro-clouds
+      .p-intro-clouds__item.p-intro-clouds__item--01
+      .p-intro-clouds__item.p-intro-clouds__item--02
+      .p-intro-clouds__item.p-intro-clouds__item--03
+
+    .p-intro-bg
+      .p-intro-bg__in
+    .p-intro-star
+      .p-intro-star__in
+
+    .p-overlay

@@ -1,0 +1,34 @@
+$color-facebook: #305097;
+$color-twitter: #00aced;
+$color-hatena: #00a4de;
+$color-googleplus: #db4e3f;
+$color-pocket: #ef4056;
+
+$color-text: #fff;
+$color-key: #be1d82;
+$color-strong: #c22;
+$color-link: #c22;
+
+@font-face {
+  font-family: 'BebasNeue';
+  font-weight: 400;
+  src:
+    url('../font/BebasNeue-Regular.ttf') format('truetype'),
+    url('../font/BebasNeue-Regular.off') format('off');
+}
+@font-face {
+  font-family: 'BebasNeue';
+  font-weight: 100;
+  src:
+    url('../font/BebasNeue-Light.ttf') format('truetype'),
+    url('../font/BebasNeue-Light.off') format('off');
+}
+
+$font-en: 'Raleway', sans-serif;
+$font-lato: 'Lato', sans-serif;
+$font-bedas: 'BebasNeue', sans-serif;
+
+$break-point-pc-s: 1366px;
+$break-point-tablet-l: 1024px;
+$break-point-tablet-p: 768px;
+$break-point-mobile-p: 414px;

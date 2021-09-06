@@ -1,0 +1,274 @@
+.p-star-agency-header {
+  line-height: 1;
+  &__heading {
+    position: absolute;
+    z-index: 100;
+    @include fontSizeAll(50, 50, 25);
+    font-family: $font-bedas;
+    @include l-more-than-mobile {
+      width: 212px;
+      height: 198px;
+      top: calc(50% - 198px / 2);
+      left: calc(50% - 212px / 2);
+    }
+    @include l-mobile {
+      width: 106px;
+      height: 106px;
+      top: calc(50% - 99px / 2);
+      left: calc(50% - 106px / 2);
+    }
+  }
+  &__heading-logo {
+    @include l-more-than-mobile {
+      width: 212px;
+      height: 92px;
+    }
+    @include l-mobile {
+      width: 106px;
+      height: 46px;
+    }
+  }
+  &__heading-row1 {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-bottom: 3px;
+    font-weight: 700;
+    @include l-more-than-mobile {
+      bottom: 45px;
+    }
+    @include l-mobile {
+      bottom: 24px;
+    }
+  }
+  &__heading-row2 {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-weight: 100;
+  }
+  &__copy {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 1em;
+    text-align: center;
+    @include fontSizeAll(36, 36, 16);
+    @include l-more-than-mobile {
+      bottom: 165px;
+      letter-spacing: 1em;
+    }
+    @include l-mobile {
+      bottom: 140px;
+      letter-spacing: .3em;
+    }
+  }
+  &__copy-col {
+    display: inline-block;
+    font-weight: 100;
+    @include l-more-than-mobile {
+    }
+    @include l-mobile {
+      margin-top: 1em;
+    }
+    &--3 {
+      font-weight: 700;
+    }
+  }
+  &__labels {
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0.1em;
+    @include fontSizeAll(14, 14, 11);
+    @include l-more-than-mobile {
+      justify-content: center;
+      bottom: 120px;
+    }
+    @include l-mobile {
+      flex-direction: column;
+      align-items: center;
+      bottom: 80px;
+    }
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    @include l-more-than-mobile {
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+    @include l-mobile {
+    }
+  }
+  &__label-plus {
+    margin-right: 3px;
+    margin-left: 3px;
+    color: $color-key;
+    @include fontSizeAll(24, 24, 22);
+  }
+  &__label-word {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+  &__guy {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-image: url('../img/star-agency/guy.png');
+    background-size: auto 100%;
+    background-position: center;
+  }
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/star-agency/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  //
+  // Interaction
+  //
+  &__heading-logo {
+    opacity: 0;
+    transform: scale(1.2);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 1s;
+      transition-delay: .8s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+  &__heading-row1 {
+    opacity: 0;
+    transform: scale(1.2);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 1s;
+      transition-delay: .85s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+  &__heading-row2 {
+    opacity: 0;
+    transform: scale(1.2);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 1s;
+      transition-delay: .9s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+  &__copy {
+    opacity: 0;
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity;
+    }
+    .is-shown & {
+      opacity: 1;
+      transition-duration: 1s;
+      transition-delay: 1.4s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+  &__label {
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition-duration: 1s;
+      @include iterateTransitionDelay(3, 0.08, 1.5);
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      @include iterateTransitionDelay(3, 0, 0);
+    }
+  }
+  &__guy {
+    opacity: 0;
+    transform: scale(1.04);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 2s;
+      transition-delay: 1s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+  &__bg {
+    opacity: 0;
+    transform: scale(1.1);
+    .is-shown &, .is-hidden &, .is-leaved-contents & {
+      transition-property: opacity, transform;
+    }
+    .is-shown & {
+      opacity: 1;
+      transform: scale(1);
+      transition-duration: 2s;
+      transition-delay: .2s;
+    }
+    .is-hidden &, .is-leaved-contents & {
+      opacity: 0;
+      transition-duration: .4s;
+      transition-delay: 0s;
+    }
+  }
+}

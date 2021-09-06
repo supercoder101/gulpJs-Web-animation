@@ -1,0 +1,64 @@
+.p-wheel-icon {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 20;
+  border: 2px solid #fff;
+  @include l-more-than-mobile {
+    width: 30px;
+    height: 50px;
+    bottom: 30px;
+    border-radius: 15px;
+  }
+  @include l-mobile {
+    width: 20px;
+    height: 5 / 3 * 20px;
+    bottom: 24px;
+    border-radius: 10px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    background-color: #fff;
+    @include l-more-than-mobile {
+      width: 8px;
+      height: 8px;
+      top: 9px;
+    }
+    @include l-mobile {
+      width: 4px;
+      height: 4px;
+      top: 6px;
+    }
+  }
+
+  //
+  // Interaction
+  //
+  opacity: 0;
+  transform: scale(1.2);
+  .is-shown &, .is-hidden &, .is-leaved-contents & {
+    transition-property: opacity, transform;
+  }
+  .is-shown & {
+    opacity: 1;
+    transform: scale(1);
+    transition-duration: 1s;
+    transition-delay: 2s;
+  }
+  .is-hidden &, .is-leaved-contents & {
+    opacity: 0;
+    transition-duration: .4s;
+    transition-delay: 0s;
+  }
+}

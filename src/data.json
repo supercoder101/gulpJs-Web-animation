@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "websiteName": "Armelin Media",
+    "keywords": "",
+    "themeColor": "#060606"
+  },
+  "pages": {
+    "index": {
+      "id": "index",
+      "title": "Armelin Media | Explore. Dream. Discover.",
+      "keywords": "",
+      "description": "",
+      "path": "/",
+      "ogpImg": "ogp.jpg"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "Armelin Media | Explore. Dream. Discover.",
+      "keywords": "",
+      "description": "",
+      "path": "/intro/",
+      "ogpImg": "ogp.jpg"
+    },
+    "creativeStudio": {
+      "id": "creativeStudio",
+      "title": "Armelin Media | Explore. Dream. Discover.",
+      "keywords": "",
+      "description": "",
+      "path": "/creative-studio/",
+      "ogpImg": "ogp.jpg"
+    },
+    "strategyWard": {
+      "id": "strategyWard",
+      "title": "Armelin Media | Explore. Dream. Discover.",
+      "keywords": "",
+      "description": "",
+      "path": "/strategy-ward/",
+      "ogpImg": "ogp.jpg"
+    },
+    "starAgency": {
+      "id": "starAgency",
+      "title": "Armelin Media | Explore. Dream. Discover.",
+      "keywords": "",
+      "description": "",
+      "path": "/star-agency/",
+      "ogpImg": "ogp.jpg"
+    }
+  }
+}
